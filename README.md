@@ -8,10 +8,12 @@ sobre 5.
 Europa y USA.
 
 3. Pide una cadena por teclado y nos muestran todos los juegos que empiecen
-por esa cadena.
+por esa cadena, su año de publicación y la desarrolladora del juego.
 
 4. Nos pide un género de videojuegos y nos lista todos los videojuegos de ese
 género.
 
 5. Nos pide cuántos jugadores quieren jugar, y nos indica cuales de los 
-juegos admiten esa cantidad de jugadores.   
+juegos admiten esa cantidad de jugadores. Tras esto nos preguntará de 
+qué clasificación por edad quieres el juego y filtrará los resultados 
+anteriores por esa clasificación.   
