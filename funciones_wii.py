@@ -25,4 +25,16 @@ def ContarRegion(region,fichero):
 	for a in lista2:
 		if region in a.xpath("./@name")[0]:
 			lista.append(a.xpath("./description/text()"))
-	return len(lista)		 		
+	return len(lista)
+
+def BuscarPorCadena(cadena,fichero):
+	lista=[]
+	lista2 = fichero.xpath("/menu/game")
+	for a in lista2:
+		if a.xpath("./@name")[0].startswith(cadena):
+			dicc={}
+			dicc['nombre']=a.xpath("./@name")[0]
+			dicc['año']=a.xpath("./year/text()")
+			dicc['desarrolladora']=a.xpath("./dev/text()")
+			lista.append(dicc)
+	return lista		

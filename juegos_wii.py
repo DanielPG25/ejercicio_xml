@@ -23,4 +23,13 @@ while opcion != 6:
 		print(f"La región {region} tiene un total de {juegos} juegos")
 		print()
 		opcion=Menu()	
+	if opcion == 3:
+		print("Ahora buscaremos los juegos que empiecen por la cadena introducida a continuación")
+		cadena = input("Dime la cadena (empiece por mayúscula): ")
+		juegos = BuscarPorCadena(cadena,fichero)
+		print()
+		for a in juegos:
+			print(f"El juego {a.get('nombre')} fue desarrollado por {a.get('desarrolladora')[0]} en el año {a.get('año')[0]}.")
+		print()
+		opcion=Menu()	
 		
