@@ -17,4 +17,12 @@ def Menu():
 
 def Clasificacion(fichero):
 	lista = fichero.xpath("//menu/game[score>=4.5]/description/text()")
-	return lista	
+	return lista
+
+def ContarRegion(region,fichero):
+	lista=[]
+	lista2 = fichero.xpath("/menu/game")
+	for a in lista2:
+		if region in a.xpath("./@name")[0]:
+			lista.append(a.xpath("./description/text()"))
+	return len(lista)		 		

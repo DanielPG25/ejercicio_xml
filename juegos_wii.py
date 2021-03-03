@@ -14,4 +14,13 @@ while opcion != 6:
 			print(a)
 		print()
 		opcion = Menu()
-print(fichero)
+	if opcion == 2:
+		print("Las regiones disponibles son USA, Europe y Japan.")
+		print()
+		region=input("Elija una región de las anteriores: ")
+		print()
+		juegos = ContarRegion(region,fichero)
+		print(f"La región {region} tiene un total de {juegos} juegos")
+		print()
+		opcion=Menu()	
+		
