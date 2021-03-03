@@ -31,5 +31,18 @@ while opcion != 6:
 		for a in juegos:
 			print(f"El juego {a.get('nombre')[0]} fue desarrollado por {a.get('desarrolladora')[0]} en el año {a.get('año')[0]}.")
 		print()
-		opcion=Menu()	
+		opcion=Menu()
+	if opcion == 4:
+		print("Ahora buscaremos juegos a partir de su género.")
+		print("Esta es una lista de los genéros más importantes para poder buscar:")
+		print("Action, Shooter, Driving, Party, Adventure, Puzzle, Fitness, Rhythm, Board Game, Tennis, Hockey, Golf, Role-Playing, Simulation, Fishing, Flying, Quiz, Platform, Soccer, Football, etc")
+		genero = input("Elige uno de los géneros anteriores: ")
+		juegos = BuscarPorGenero(genero,fichero)
+		print()
+		print(f"Los juegos del género {genero} son:")
+		print()
+		for a in juegos:
+			print(a[0])
+		print()
+		opcion=Menu()			
 		

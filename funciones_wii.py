@@ -37,4 +37,12 @@ def BuscarPorCadena(cadena,fichero):
 			dicc['año']=a.xpath("./year/text()")
 			dicc['desarrolladora']=a.xpath("./dev/text()")
 			lista.append(dicc)
-	return lista		
+	return lista
+
+def BuscarPorGenero(genero,fichero):
+	lista=[]
+	lista2 = fichero.xpath("/menu/game")
+	for a in lista2:
+		if genero in a.xpath("./genre/text()"):
+			lista.append(a.xpath("./description/text()"))
+	return lista					
