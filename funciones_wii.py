@@ -33,7 +33,7 @@ def BuscarPorCadena(cadena,fichero):
 	for a in lista2:
 		if a.xpath("./@name")[0].startswith(cadena):
 			dicc={}
-			dicc['nombre']=a.xpath("./@name")[0]
+			dicc['nombre']=a.xpath("./description/text()")
 			dicc['año']=a.xpath("./year/text()")
 			dicc['desarrolladora']=a.xpath("./dev/text()")
 			lista.append(dicc)

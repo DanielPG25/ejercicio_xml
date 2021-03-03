@@ -29,7 +29,7 @@ while opcion != 6:
 		juegos = BuscarPorCadena(cadena,fichero)
 		print()
 		for a in juegos:
-			print(f"El juego {a.get('nombre')} fue desarrollado por {a.get('desarrolladora')[0]} en el año {a.get('año')[0]}.")
+			print(f"El juego {a.get('nombre')[0]} fue desarrollado por {a.get('desarrolladora')[0]} en el año {a.get('año')[0]}.")
 		print()
 		opcion=Menu()	
 		
